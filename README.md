@@ -1,5 +1,7 @@
 # AttrLazyReader
 
+[![Build Status](https://travis-ci.org/maisumakun/attr_lazy_reader.svg?branch=master)](https://travis-ci.org/maisumakun/attr_lazy_reader)
+
 Making eazily initialized read-only attributes in a simple manner.
 
 ## Installation
