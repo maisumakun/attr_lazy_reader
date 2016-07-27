@@ -1,8 +1,6 @@
 # AttrLazyReader
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/attr_lazy_reader`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Making eazily initialized read-only attributes in a simple manner.
 
 ## Installation
 
@@ -22,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+It contains only one method.
+
+### `Module#attr_lazy_reader(sym, &block)` (private)
+It makes `sym` method just like `Module#attr_reader`, but it requires block.
+
+1. if instance variable `@#{sym}` exists (even if it is `nil`), just return it and block is not called.
+2. Otherwise, `block` is evaluated in instance context, set the return value to instance variable `@#{sym}`,
+and returns the value
 
 ## Development
 
@@ -32,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/attr_lazy_reader.
+Bug reports and pull requests are welcome on GitHub at https://github.com/maisumakun/attr_lazy_reader.
 
 
 ## License
